@@ -16,4 +16,8 @@ contract WrappedERC20Token is ERC20Token {
     function burn(address _address, uint256 amount) external onlyOwner {
         _burn(_address, amount);
     }
+
+    function changeOwner(address _owner) external onlyOwner {
+        transferOwnership(_owner);
+    }
 }

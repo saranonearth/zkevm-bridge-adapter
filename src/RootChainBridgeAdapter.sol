@@ -42,7 +42,7 @@ contract RootChainBridgeAdapter is
 
     error MessageInvalid();
 
-    constructor(address) {
+    constructor() {
         _disableInitializers();
     }
 
@@ -55,7 +55,6 @@ contract RootChainBridgeAdapter is
         __AccessControlDefaultAdminRules_init(3 days, _adminAddress);
         __UUPSUpgradeable_init();
 
-        _grantRole(DEFAULT_ADMIN_ROLE, _adminAddress);
         token = IERC20(_tokenAddress);
         zkEVMBridge = IZkEVMBridge(_bridgeAddress);
         childChainNetworkID = _childChainNetworkID;

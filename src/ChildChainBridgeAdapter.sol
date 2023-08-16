@@ -40,7 +40,7 @@ contract ChildChainBridgeAdapter is
 
     error MessageInvalid();
 
-    constructor(address) {
+    constructor() {
         _disableInitializers();
     }
 
